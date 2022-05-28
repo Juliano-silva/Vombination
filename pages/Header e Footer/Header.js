@@ -11,14 +11,15 @@ class Header extends Component{
      $("#btn").on("click",function(){
       $("#sub").fadeOut('fast')
      })
-  //   //  $("#btn").on("click",function(){
-  //   //   $("#sub").fadeIn('fast')
-  //    })
+     $("#btnClick").on("click",function(){
+       $("#sub").fadeIn()
+     })
   }
 render(){
   return(
     <div>
       <h1 className={style.Titulo}><IoIosMenu id='btn'/>Título</h1>
+      <button id='btnClick'>AQUI</button>
       <ul className={style.sub_títulos} id="sub">
         <li><Link href="/"><a>Blog</a></Link></li>
           <li><Link href="/views/Res/Restaurante"><a>Restaurante</a></Link></li>

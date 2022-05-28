@@ -1,0 +1,21 @@
+.Blog{
+    border: 1px solid black;
+    background: black;
+    margin: auto;
+    margin-top: 10px;
+    color: white;
+    height: 100em;
+}
+.img{
+    filter: drop-shadow(0 0 0.4rem red);
+}
+.CardD{
+    border: 1px solid white;
+    position: absolute;
+    right: 0;
+    width: 15em;
+}
+.contéudoD{
+    border: 1px solid bisque;
+    width: 80em;
+}

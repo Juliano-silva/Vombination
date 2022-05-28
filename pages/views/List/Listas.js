@@ -15,6 +15,7 @@ class Jquery extends Component{
     render(){
       return(
         <nav>
+          <title>Listas</title>
             <Header/>
           <h2>Jquery</h2>
           <p>
