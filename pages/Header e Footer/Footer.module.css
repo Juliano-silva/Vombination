@@ -1,0 +1,9 @@
+.Footer{
+    border: 1px solid red;
+    background: red;
+    text-align: center;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}

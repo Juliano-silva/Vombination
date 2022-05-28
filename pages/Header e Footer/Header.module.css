@@ -1,0 +1,21 @@
+
+.Titulo{
+    border: 1px solid red;
+    background: red;
+    color: white;
+    text-align: center;
+    top: 0;
+}
+.sub_títulos{
+    border: 1px solid black;
+    background: black;
+    color: white;
+    width: 10em;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.sub_títulos > li{
+    color: white;
+    padding: 0.4em;
+}
