@@ -2,9 +2,9 @@
     border: 1px solid black;
     background: black;
     margin: auto;
-    margin-top: 10px;
     color: white;
     height: 100em;
+    margin-top: -1px;
 }
 .img{
     filter: drop-shadow(0 0 0.4rem red);
@@ -13,7 +13,7 @@
     border: 1px solid white;
     position: absolute;
     right: 0;
-    width: 15em;
+    width: 16em;
 }
 .contéudoD{
     border: 1px solid bisque;

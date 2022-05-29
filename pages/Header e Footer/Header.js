@@ -1,26 +1,31 @@
 import style from './Header.module.css'
 import Link from 'next/link';
 import React,{Component} from 'react';
-import $ from 'jquery';
+import $, { css } from 'jquery';
 import {IoIosMenu} from 'react-icons/io'
 class Header extends Component{
   constructor(props){
     super(props)
   }
   componentDidMount = () => {
-     $("#btn").on("click",function(){
-      $("#sub").fadeOut('fast')
-     })
-     $("#btnClick").on("click",function(){
-       $("#sub").fadeIn()
-     })
+     $("#btnClick").on("change",function(){
+       if ($(this).prop('checked')){
+        $("#sub").fadeIn()
+       }else{
+        $("#sub").fadeOut()
+       }
+  })
   }
 render(){
   return(
     <div>
-      <h1 className={style.Titulo}><IoIosMenu id='btn'/>Título</h1>
-      <button id='btnClick'>AQUI</button>
+      <div className={style.Titulo}>
+      <h1>Título</h1>
+      <label for="btnClick"><IoIosMenu className={style.Menu}/></label>
+      <input className={style.submi} type="checkbox" id='btnClick'/>
+      </div>
       <ul className={style.sub_títulos} id="sub">
+      <label for="btnClick"><IoIosMenu className={style.Menu}/></label>
         <li><Link href="/"><a>Blog</a></Link></li>
           <li><Link href="/views/Res/Restaurante"><a>Restaurante</a></Link></li>
           <li><Link href="/views/Port/Port"><a>Portfolio</a></Link></li>

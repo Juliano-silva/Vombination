@@ -5,14 +5,11 @@ body {
   overflow-x: hidden;
 }
 body{
-  background: gray;
+  background: #4e4e4b;
 }
 a {
   color: inherit;
   text-decoration: none;
-}
-nav{
-  margin: auto;
 }
 * {
   margin: 0;

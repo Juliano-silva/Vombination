@@ -9,8 +9,8 @@ export default function Wiki(){
               <title>Wiki</title>
         <Header/>
         <div className={style.Blog}>
-        <Image className={style.img} src={Logo} />
         <div className={style.CardD}>
+        <Image className={style.img} src={Logo} />
         <h1>Dante</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur provident quae modi inventore corrupti tempora atque reprehenderit! Ea ipsum eum necessitatibus quis, fugiat error? Officiis dolor dicta illum perferendis ipsa.</p>
         </div>

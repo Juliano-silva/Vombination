@@ -1,7 +1,13 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 export default function Conteúdo({restbates}){
-    const {pratos} = restbates.fields
+    const {pratos,descrio,ingredientsRes} = restbates.fields
     return(
-        <h1>{pratos}</h1>
+        <div>
+            <h1>{pratos}</h1>
+            <h1>{descrio}</h1>
+            <ul>
+                <li>{ingredientsRes}</li>
+            </ul>
+        </div>
     )
 }

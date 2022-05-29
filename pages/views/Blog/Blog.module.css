@@ -1,0 +1,20 @@
+.Blog{
+    border: 5px solid turquoise;
+    background: turquoise;
+    text-align: center;
+}
+.texto{
+    border: 1px solid red;
+    width: 50em;
+    height: 5em;
+    resize: none;
+}
+.CorpoBlog{
+    display: block;
+    border: 1px solid white;
+    background: white;
+    text-align: center;
+    margin: auto;
+    width: 60em;
+    height: 20em;
+}

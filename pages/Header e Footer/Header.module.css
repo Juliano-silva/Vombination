@@ -7,15 +7,20 @@
     top: 0;
 }
 .sub_títulos{
+    position: fixed;
     border: 1px solid black;
     background: black;
     color: white;
     width: 10em;
     height: 100%;
-    position: absolute;
     top: 0;
 }
 .sub_títulos > li{
     color: white;
     padding: 0.4em;
+}
+.submi{display: none;}
+.Menu{
+    display: block;
+    margin: auto;
 }
