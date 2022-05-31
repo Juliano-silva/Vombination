@@ -2,6 +2,7 @@
     border: 5px solid turquoise;
     background: turquoise;
     text-align: center;
+    height: 30em;
 }
 .texto{
     border: 1px solid red;
@@ -17,4 +18,17 @@
     margin: auto;
     width: 60em;
     height: 20em;
+}
+.btn{
+    border: 0px solid black;
+    border-radius: 20px;
+    width: 10em;
+    height: 2em;
+    color: white;
+    cursor: pointer;
+    background: blue;
+}
+.btn:hover{
+    background: white;
+    color: blue;
 }

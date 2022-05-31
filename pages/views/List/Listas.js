@@ -7,20 +7,20 @@ class Jquery extends Component{
     constructor(props){
       super(props)
     }
-    componentDidMount = () => {
-      $('button').on('click',function(){
-        alert("Test")
-      })
-    }
+    componentDidMount = () => {}
     render(){
       return(
         <nav>
           <title>Listas</title>
             <Header/>
           <h2>Jquery</h2>
-          <p>
-            <button>Test Button</button>
-          </p>
+          <button>Criar uma lista</button>
+          <button>Adicionar a uma lista já existente</button>
+          <table>
+            <td>Nome: Juliano</td>
+            <td>Idade: 17</td>
+            <td>Profissão: Programador</td>
+          </table>
           <Footer/>
         </nav>
       )

@@ -1,5 +1,6 @@
 import Header from "../../Header e Footer/Header"
 import Footer from "../../Header e Footer/Footer"
+import Mur from './ConteúdoMur'
 import { createClient } from "contentful"
 export async function getStaticProps() {
   const client = createClient({
@@ -17,12 +18,14 @@ export async function getStaticProps() {
 }
 
 export default function Novidade({murals}){
-    console.log(murals)
+  console.log(murals)
     return(
         <nav>
           <title>Mural de fotos</title>
             <Header/>
-            <h1>Mural de fotos</h1>
+            {murals.map((mural)=>(
+            <Mur key={mural.sys.id} murals={mural}/>
+            ))}
             <Footer/>
         </nav>
     )

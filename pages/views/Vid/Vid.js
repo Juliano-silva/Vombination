@@ -1,5 +1,8 @@
 import Header from "../../Header e Footer/Header"
 import Footer from "../../Header e Footer/Footer"
+import style from './Vid.module.css'
+import Tab from '../../Img/Tab.jpg'
+import Image from 'next/image'
 import { createClient } from "contentful"
 export async function getStaticProps() {
   const client = createClient({
@@ -22,7 +25,16 @@ export default function Víd({youbates}){
         <nav>
             <title>Vídeos</title>
         <Header/>
-        <h1>Restaurante</h1>
+        <h1>Vídeos</h1>
+        <div className={style.Tabs}>
+        <Image src={Tab} />
+        </div>
+        <h1>Nome de um vídeo</h1>
+        <button>Like</button>
+        <button>DesLike</button>
+        {/* icone do canal */}
+        <h1>Eve</h1>
+        <br />
         <Footer/>
         </nav>
     )

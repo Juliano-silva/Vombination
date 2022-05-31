@@ -1,8 +1,10 @@
 import style from './Header.module.css'
 import Link from 'next/link';
+import Image from 'next/image'
 import React,{Component} from 'react';
 import $, { css } from 'jquery';
 import {IoIosMenu} from 'react-icons/io'
+import icone from '../Img/download.png'
 class Header extends Component{
   constructor(props){
     super(props)
@@ -10,9 +12,9 @@ class Header extends Component{
   componentDidMount = () => {
      $("#btnClick").on("change",function(){
        if ($(this).prop('checked')){
-        $("#sub").fadeIn()
+        $("#sub").fadeIn(this.scrollLeft)
        }else{
-        $("#sub").fadeOut()
+        $("#sub").fadeOut(this.scrollLeft)
        }
   })
   }
@@ -20,7 +22,8 @@ render(){
   return(
     <div>
       <div className={style.Titulo}>
-      <h1>Título</h1>
+      <Image className={style.ico} src={icone} />
+      <h1>Vombate</h1>
       <label for="btnClick"><IoIosMenu className={style.Menu}/></label>
       <input className={style.submi} type="checkbox" id='btnClick'/>
       </div>
@@ -33,6 +36,10 @@ render(){
           <li><Link href="/views/Wik/Wiki"><a>Wiki</a></Link></li>
           <li><Link href="/views/Mur/Mural"><a>Mural de fotos</a></Link></li>
           <li><Link href="/views/List/Listas"><a>Listas</a></Link></li>
+          <div className={style.HPerfil}>
+        <h1>Juliano</h1>
+        <p>Juliano</p>
+      </div>
       </ul>
     </div>
   )

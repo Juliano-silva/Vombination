@@ -7,6 +7,7 @@
     top: 0;
 }
 .sub_títulos{
+    display: none;
     position: fixed;
     border: 1px solid black;
     background: black;
@@ -14,6 +15,13 @@
     width: 10em;
     height: 100%;
     top: 0;
+}
+img > .ico{
+    width: 1.5em;
+    border-radius: 50%;
+    position: fixed;
+    margin: auto;
+    margin-left: 500px;
 }
 .sub_títulos > li{
     color: white;
@@ -23,4 +31,10 @@
 .Menu{
     display: block;
     margin: auto;
+}
+.HPerfil{
+    position: absolute;
+    bottom: 0;
+    border: 1px solid white;
+    width: 10em;
 }
