@@ -7,6 +7,7 @@ export default function Blog(){
             <h1>Blog</h1>
             <br />
             <Api/>
+            <br />
         </div>
         </div>
     )

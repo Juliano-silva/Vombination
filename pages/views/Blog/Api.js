@@ -87,6 +87,7 @@ function Projects () {
               name={project.name}
               texto={project.texto}
               img={project.img}
+              deta={project.deta}
               key={project.id}
               handleRemove={removeProject}
             />
@@ -123,6 +124,13 @@ function Textarea({name, placeholder, handleOnChange, value}){
     </div>
   )
 }
+function Data(name,handleOnChange, value){
+  return(
+    <div>
+      <input type="datetime" name={name} id={name} onChange={handleOnChange} value={value} />
+    </div>
+  )
+}
 function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [project, setProject] = useState(projectData || {})
 
@@ -133,22 +141,31 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   function handleChange(e) {
     setProject({ ...project, [e.target.name]: e.target.value })
   }
+  var date = new Date
+  var day = date.getDate()
+  var hour = date.getHours()
+  var min = date.getMinutes()
+  var seg = date.getSeconds()
+  var Horário =  "Dia:"+day+" "+"Hora: "+hour+":"+min+":"+seg 
   return (
     <form onSubmit={submit} >
       <ul>
         <li><Textarea text="Texto" name="texto" placeholder="O que está acontecendo?" handleOnChange={handleChange} value={project.texto}/></li>
+        <li><Data name="deta" handleChange={handleChange} value={project.deta=Horário}/></li>
       </ul>
       <SubmitButton handleOnChange={handleChange} id="SB" text={btnText} />
     </form>
   )
 }
-function ProjectCard({ id, handleRemove,texto,time }) {
+function ProjectCard({ id, handleRemove,texto,deta }) {
     const remove = (e) => {
       e.preventDefault()
       handleRemove(id)
     }
+    // Estilo do corpo
     return (
-         <div>
+        <div className={style.Corpo}>
+        <h1>{deta}</h1>
         <BsThreeDots onClick={remove}/>
         <p>{texto} </p>
       </div>

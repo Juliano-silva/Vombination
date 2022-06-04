@@ -1,8 +1,19 @@
 .Footer{
-    border: 1px solid red;
-    background: red;
+    border: 1px solid #433a72;
+    background: #433a72;
     text-align: center;
     color: white;
     width: 100%;
-    margin-top: 10%;
+    height: 15em;
+    bottom: 0;
+}
+.ListFooter{
+    width: 94em;
+    margin: auto;
+}
+.ListFooter > div{
+    border: 1px solid white;
+    width: 20em;
+    display: table-cell;
+    font-size: 20px;
 }

@@ -1,0 +1,5 @@
+.Mural > img{
+    width: 40em;
+    height: 20em;
+    border: 1px solid red;
+}

@@ -4,6 +4,7 @@ import style from './Vid.module.css'
 import Tab from '../../Img/Tab.jpg'
 import Image from 'next/image'
 import { createClient } from "contentful"
+import ConteúdoVido from "./ConteúdoVid"
 export async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -25,15 +26,18 @@ export default function Víd({youbates}){
         <nav>
             <title>Vídeos</title>
         <Header/>
-        <h1>Vídeos</h1>
+        <br />
         <div className={style.Tabs}>
-        <Image src={Tab} />
+        <Image width={1000} src={Tab} />
         </div>
         <h1>Nome de um vídeo</h1>
         <button>Like</button>
         <button>DesLike</button>
         {/* icone do canal */}
         <h1>Eve</h1>
+        {youbates.map((youbate) => (
+            <ConteúdoVido key={youbate.sys.id} youbates={youbate}/>
+        ))}
         <br />
         <Footer/>
         </nav>

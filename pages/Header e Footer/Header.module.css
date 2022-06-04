@@ -1,10 +1,16 @@
 
 .Titulo{
-    border: 1px solid red;
-    background: red;
+    border: 1px solid #433a72;
+    background: #433a72;
     color: white;
     text-align: center;
     top: 0;
+    height: 2.5em;
+}
+.Titulo > h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    margin-top: -44px;
 }
 .sub_títulos{
     display: none;
@@ -16,21 +22,22 @@
     height: 100%;
     top: 0;
 }
-img > .ico{
-    width: 1.5em;
+.ico{
     border-radius: 50%;
-    position: fixed;
-    margin: auto;
-    margin-left: 500px;
+    margin-left: -155px;
 }
 .sub_títulos > li{
     color: white;
     padding: 0.4em;
 }
 .submi{display: none;}
-.Menu{
-    display: block;
-    margin: auto;
+.Menu,.Menu1{
+    display: table-cell;
+    font-size: 40px;
+    margin-top: -0px;
+}
+.Menu1{
+    margin-top: -37px;
 }
 .HPerfil{
     position: absolute;

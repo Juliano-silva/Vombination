@@ -1,4 +1,4 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Link from 'next/link'
 import style from './Restaurante.module.css'
 export default function Conteúdo({restbates}){
     const {pratos,descrio,ingredientsRes,fotosPrtatos} = restbates.fields

@@ -28,6 +28,11 @@
     cursor: pointer;
     background: blue;
 }
+.Corpo{
+    border: 1px solid red;
+    width: 60em;
+    margin: auto;
+}
 .btn:hover{
     background: white;
     color: blue;

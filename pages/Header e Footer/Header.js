@@ -5,6 +5,8 @@ import React,{Component} from 'react';
 import $, { css } from 'jquery';
 import {IoIosMenu} from 'react-icons/io'
 import icone from '../Img/download.png'
+function Fim(){window.scrollTo({top: 1000,behavior:'smooth'})}
+function Começo(){window.scrollTo({top:0,behavior:'smooth'})}
 class Header extends Component{
   constructor(props){
     super(props)
@@ -22,9 +24,11 @@ render(){
   return(
     <div>
       <div className={style.Titulo}>
-      <Image className={style.ico} src={icone} />
+      <div className={style.ico}>
+      <Image width={40} height={40} src={icone} />
+      </div>
       <h1>Vombate</h1>
-      <label for="btnClick"><IoIosMenu className={style.Menu}/></label>
+      <label for="btnClick"><IoIosMenu className={style.Menu1}/></label>
       <input className={style.submi} type="checkbox" id='btnClick'/>
       </div>
       <ul className={style.sub_títulos} id="sub">
@@ -36,6 +40,8 @@ render(){
           <li><Link href="/views/Wik/Wiki"><a>Wiki</a></Link></li>
           <li><Link href="/views/Mur/Mural"><a>Mural de fotos</a></Link></li>
           <li><Link href="/views/List/Listas"><a>Listas</a></Link></li>
+          <li><button onClick={Começo} id='cima'>Cima</button></li>
+          <li><button onClick={Fim} id='baixo'>Baixo</button></li>
           <div className={style.HPerfil}>
         <h1>Juliano</h1>
         <p>Juliano</p>

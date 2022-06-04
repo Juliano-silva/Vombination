@@ -2,6 +2,7 @@ import Header from "../../Header e Footer/Header"
 import Footer from "../../Header e Footer/Footer"
 import style from './Wiki.module.css'
 import Logo from '../../Img/Dmc.png'
+import Dante from '../../Img/Dante_4.jpg'
 import Image from 'next/image'
 export default function Wiki(){
     return(
@@ -11,6 +12,7 @@ export default function Wiki(){
         <div className={style.Blog}>
         <div className={style.CardD}>
         <Image className={style.img} src={Logo} />
+        <Image src={Dante}/>
         <h1>Dante</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur provident quae modi inventore corrupti tempora atque reprehenderit! Ea ipsum eum necessitatibus quis, fugiat error? Officiis dolor dicta illum perferendis ipsa.</p>
         </div>
