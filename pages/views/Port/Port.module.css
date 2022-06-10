@@ -1,6 +1,43 @@
 .Portfolio{
-    border: 1px solid white;
-    height: 42em;
-    background: white;
+    border: 1px solid #134758;
+    height: 44.7em;
+    background: #134758;
     text-align: center;
+}
+.Autore{
+    background-image: url(../../Img/BK.jpg);
+    margin-top: -0.4px;
+    height: 20em;
+}
+.Imagens{
+    border-radius: 250px;
+}
+.Port{
+    border: 2px solid black;
+    width: 50em;
+    height: 22em;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 32px;
+}
+.Port > h1{
+    color: white;
+    font-size: 55px;
+    text-shadow: 5px 5px 1px seagreen;
+}
+.Port > p{
+    color: aliceblue;
+    font-size: 25px;
+}
+.Port > h4{
+    margin-top: 10px;
+    color: cornflowerblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+.Informações > button{
+    background: transparent;
+    border: 1px solid transparent;
+    width: 4em;
 }

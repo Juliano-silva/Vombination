@@ -2,6 +2,7 @@
 import Header from "../../Header e Footer/Header"
 import Footer from "../../Header e Footer/Footer"
 import React, {Component} from "react";
+import ApiList from './ApiList'
 import $ from 'jquery'
 class Jquery extends Component{
     constructor(props){
@@ -16,11 +17,7 @@ class Jquery extends Component{
           <h2>Jquery</h2>
           <button>Criar uma lista</button>
           <button>Adicionar a uma lista já existente</button>
-          <table>
-            <td>Nome: Juliano</td>
-            <td>Idade: 17</td>
-            <td>Profissão: Programador</td>
-          </table>
+            <ApiList/>
           <Footer/>
         </nav>
       )

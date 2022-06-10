@@ -1,13 +1,12 @@
 import { useParams,useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { BsThreeDots } from "react-icons/bs"
-import style from './Blog.module.css'
-import styled from 'styled-components'
+import style from './Listas.module.css'
 function Project() {
   let { id } = useParams()
   const [project, setProject] = useState([])
   const [services, setServices] = useState([])
-  useEffect(() => { setTimeout( () => fetch(`http://localhost:5000/projects/${id}`,{
+  useEffect(() => { setTimeout( () => fetch(`http://localhost:5000/historico/${id}`,{
           method: 'GET',headers: {'Content-Type': 'application/json',},})
           .then((resp) => resp.json())
           .then((data) => {
@@ -38,7 +37,7 @@ function Projects () {
   useEffect(() => {
     setTimeout(
       () =>
-        fetch('http://localhost:5000/projects',{
+        fetch('http://localhost:5000/historico',{
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -53,7 +52,7 @@ function Projects () {
   useEffect(() => {
     setTimeout(
       () =>
-        fetch('http://localhost:5000/projects',{
+        fetch('http://localhost:5000/historico',{
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -66,7 +65,7 @@ function Projects () {
     )
   }, [])
   function removeProject(id) {
-    fetch(`http://localhost:5000/projects/${id}`, {
+    fetch(`http://localhost:5000/historico/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -84,12 +83,8 @@ function Projects () {
           projects.map((project) => (
             <ProjectCard
               id={project.id}
-              bio={project.bio}
               name={project.name}
               texto={project.texto}
-              img={project.img}
-              color={project.color}
-              deta={project.deta}
               key={project.id}
               handleRemove={removeProject}
             />
@@ -100,7 +95,7 @@ function Projects () {
 }
 function NewProject() {
   const history = useHistory()
-  function createPost(project) {fetch('http://localhost:5000/projects', {method: 'POST',headers: {'Content-Type': 'application/json'},body: JSON.stringify(project)})
+  function createPost(project) {fetch('http://localhost:5000/historico', {method: 'POST',headers: {'Content-Type': 'application/json'},body: JSON.stringify(project)})
       .then((resp) => resp.json())
       .then(() => {history.push('/Home')})}
   return (
@@ -115,7 +110,7 @@ function subButton(){
 function SubmitButton({ text }) {
   return (
     <div>
-      <button  className={style.btn} onClick={subButton}>{text}</button>
+      <button onClick={subButton}>{text}</button>
     </div>
   )
 }
@@ -123,20 +118,6 @@ function Textarea({name, placeholder, handleOnChange, value}){
   return(
     <div>
     <textarea name={name} id={name} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
-    </div>
-  )
-}
-function Data(name,handleOnChange, value){
-  return(
-    <div>
-      <input type="datetime" name={name} id={name} onChange={handleOnChange} value={value} />
-    </div>
-  )
-}
-function Color({name,handleOnChange,value,type}){
-  return(
-    <div>
-      <input type={type} name={name} id={name} onChange={handleOnChange} value={value} />
     </div>
   )
 }
@@ -150,44 +131,29 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   function handleChange(e) {
     setProject({ ...project, [e.target.name]: e.target.value })
   }
-  var date = new Date
-  var day = date.getDate()
-  var hour = date.getHours()
-  var min = date.getMinutes()
-  var seg = date.getSeconds()
-  var Horário =  "Dia:"+day+" "+"Hora: "+hour+":"+min+":"+seg 
   return (
     <form onSubmit={submit} >
       <ul>
         <li><Textarea text="Texto" name="texto" placeholder="O que está acontecendo?" handleOnChange={handleChange} value={project.texto}/></li>
-        <li><Data name="deta" handleChange={handleChange} value={project.deta=Horário}/></li>
-        <li><Color type="color" name="color" handleOnChange={handleChange} value={project.color}/></li>
       </ul>
       <SubmitButton handleOnChange={handleChange} id="SB" text={btnText} />
     </form>
   )
 }
-export const CorpoBK = styled.div`background:${(props) => props.color}`;
-function ProjectCard({ id, handleRemove,texto,deta,color }) {
+function ProjectCard({ id, handleRemove,texto }) {
     const remove = (e) => {
       e.preventDefault()
       handleRemove(id)
     }
     // Estilo do corpo
-    var vermelho = `${color}`;
     return (
-      <div>
-        <CorpoBK className={style.Corpo} color={vermelho}>
+        <div>
         <br />
-       <h1>{deta}</h1>
-        <h1>{color}</h1>
         <BsThreeDots onClick={remove}/>
-        <div className={style.TextoT}>
-        <p>{texto} </p>  
+        <div>
+        <p className={style.ListItem}>{texto} </p>  
         </div>
-        </CorpoBK>
-        <br />
-      </div>
+        </div>
     )
   }
 export default function Api(){

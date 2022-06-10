@@ -1,0 +1,9 @@
+.ListItem{
+    border: 1px solid red;
+    width: 10em;
+    text-align: center;
+    color: white;
+}
+.ListItem:hover{
+    text-decoration: line-through black;
+}

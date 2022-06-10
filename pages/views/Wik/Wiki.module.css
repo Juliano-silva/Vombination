@@ -3,7 +3,7 @@
     background: black;
     margin: auto;
     color: white;
-    height: 100em;
+    height: 100%;
     margin-top: -1px;
 }
 .img{
@@ -19,4 +19,9 @@
 .contéudoD{
     border: 1px solid bisque;
     width: 80em;
+}
+.ImgDmc{
+    border: 1px solid white;
+    width: 15em;
+    height: 15em;
 }
