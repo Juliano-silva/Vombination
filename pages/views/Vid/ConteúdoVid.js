@@ -1,4 +1,5 @@
 import { createClient } from "contentful"
+import Comentario from './Comentario'
 export default function ConteúdoVido({youbates}){
     const {vdeo,uploand} = youbates.fields
     return(
@@ -11,6 +12,7 @@ export default function ConteúdoVido({youbates}){
             allowFullScreen="false"
             />
             {/* Comentário */}
+            <Comentario/>
             <h1>{uploand}</h1>
         </div>
     )

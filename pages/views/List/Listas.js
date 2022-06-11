@@ -15,8 +15,6 @@ class Jquery extends Component{
           <title>Listas</title>
             <Header/>
           <h2>Jquery</h2>
-          <button>Criar uma lista</button>
-          <button>Adicionar a uma lista já existente</button>
             <ApiList/>
           <Footer/>
         </nav>
