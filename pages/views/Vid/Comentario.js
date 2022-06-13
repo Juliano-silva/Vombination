@@ -1,6 +1,9 @@
 import { useParams,useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { BsThreeDots } from "react-icons/bs"
+import Image from 'next/image'
+import Autor from '../../Img/Autor.png'
+import style from './Vid.module.css'
 function Projects () {
   const [projects, setProjects] = useState([])
   useEffect(() => {
@@ -73,7 +76,7 @@ function NewProject() {
       .then(() => {history.push('/Home')})}
   return (
     <div >
-      <ProjectForm handleSubmit={createPost} btnText="Enviar" />
+      <ProjectForm handleSubmit={createPost} btnText="Publicar" />
     </div>
   )
 }
@@ -83,21 +86,14 @@ function subButton(){
 function SubmitButton({ text }) {
   return (
     <div>
-      <button  onClick={subButton}>{text}</button>
+      <button className={style.BtnCom}  onClick={subButton}>{text}</button>
     </div>
   )
 }
 function Textarea({name, placeholder, handleOnChange, value}){
   return(
     <div>
-    <textarea name={name} id={name} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
-    </div>
-  )
-}
-function Data(name,handleOnChange, value){
-  return(
-    <div>
-      <input type="datetime" name={name} id={name} onChange={handleOnChange} value={value} />
+    <textarea className={style.Comentario} name={name} id={name} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
     </div>
   )
 }
@@ -111,33 +107,20 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   function handleChange(e) {
     setProject({ ...project, [e.target.name]: e.target.value })
   }
-  var date = new Date
-  var day = date.getDate()
-  var hour = date.getHours()
-  var min = date.getMinutes()
-  var seg = date.getSeconds()
-  var Horário =  "Dia:"+day+" "+"Hora: "+hour+":"+min+":"+seg 
   return (
     <form onSubmit={submit} >
       <ul>
-        <li><Textarea text="Texto" name="texto" placeholder="O que está acontecendo?" handleOnChange={handleChange} value={project.texto}/></li>
-        <li><Data name="deta" handleChange={handleChange} value={project.deta=Horário}/></li>
+        <li><Textarea text="Texto" name="texto" placeholder="Adicione um comentário..." handleOnChange={handleChange} value={project.texto}/></li>
       </ul>
       <SubmitButton handleOnChange={handleChange} id="SB" text={btnText} />
     </form>
   )
 }
-function ProjectCard({ id, handleRemove,texto,deta,color }) {
-    const remove = (e) => {
-      e.preventDefault()
-      handleRemove(id)
-    }
+function ProjectCard({texto}) {
     return (
       <div>
-       <h1>{deta}</h1>
-        <BsThreeDots onClick={remove}/>
         <div>
-        <p>{texto} </p>  
+        <p className={style.comeTexto}>{texto} </p>  
         </div>
       </div>
     )
@@ -145,8 +128,11 @@ function ProjectCard({ id, handleRemove,texto,deta,color }) {
 export default function Comentario(){
     return(
         <div>
-            <NewProject/>
+          <hr className={style.hr}/>
+           <div className={style.project}>
+           <NewProject/>
             <Projects/>
+           </div>
         </div> 
     )
 }

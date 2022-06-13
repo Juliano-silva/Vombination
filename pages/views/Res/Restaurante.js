@@ -1,6 +1,7 @@
 import Header from "../../Header e Footer/Header"
 import Footer from "../../Header e Footer/Footer"
 import Conteúdo from "./ConteúdoRes"
+import style from './Restaurante.module.css'
 import { createClient } from "contentful"
 export async function getStaticProps() {
   const client = createClient({
@@ -23,10 +24,11 @@ export default function Restaurante({restbates}){
         <nav>
           <title>Restaurante</title>
     <Header/>
-    <h1>Restaurante</h1>
+    <div className={style.Restaurante}>
     {restbates.map((restbate)=>(
        <Conteúdo key={restbate.sys.id} restbates={restbate}/>
     ))}
+    </div>
     <Footer/>
     </nav>
     )

@@ -5,6 +5,7 @@ import React,{Component} from 'react';
 import $, { css } from 'jquery';
 import {IoIosMenu} from 'react-icons/io'
 import icone from '../Img/download.png'
+import {RiArrowUpSLine,RiArrowDownSLine} from 'react-icons/ri'
 function Fim(){window.scrollTo({top: 1000,behavior:'smooth'})}
 function Começo(){window.scrollTo({top:0,behavior:'smooth'})}
 class Header extends Component{
@@ -35,16 +36,17 @@ render(){
       <label for="btnClick"><IoIosMenu className={style.Menu}/></label>
         <li><Link href="/"><a>Blog</a></Link></li>
           <li><Link href="/views/Res/Restaurante"><a>Restaurante</a></Link></li>
-          <li><Link href="/views/Port/Port"><a>Portfolio</a></Link></li>
-          <li><Link href="/views/Vid/Vid"><a>Vídeos</a></Link></li>
-          <li><Link href="/views/Wik/Wiki"><a>Wiki</a></Link></li>
-          <li><Link href="/views/Mur/Mural"><a>Mural de fotos</a></Link></li>
           <li><Link href="/views/List/Listas"><a>Listas</a></Link></li>
-          <li><button onClick={Começo} id='cima'>Cima</button></li>
-          <li><button onClick={Fim} id='baixo'>Baixo</button></li>
+          <li><Link href="/views/Vid/Vid"><a>Vídeos</a></Link></li>
+          <li><Link href="/views/Wikipedia/Wiki"><a>Wiki</a></Link></li>
+          <li><Link href="/views/Mur/Mural"><a>Mural de fotos</a></Link></li>
+          <li><Link href="/views/Port/Port"><a>Portfolio</a></Link></li>
+          <li><button className={style.Botão} onClick={Começo} id='cima'><RiArrowUpSLine/></button></li>
+          <li><button className={style.Botão} onClick={Fim} id='baixo'><RiArrowDownSLine/></button></li>
           <div className={style.HPerfil}>
+            <img className={style.SidebarImg}  />
         <h1>Juliano</h1>
-        <p>Juliano</p>
+        <p>@Juliano</p>
       </div>
       </ul>
     </div>

@@ -1,19 +1,20 @@
 import { createClient } from "contentful"
-import Comentario from './Comentario'
+import style from './Vid.module.css'
 export default function ConteúdoVido({youbates}){
-    const {vdeo,uploand} = youbates.fields
+    const {vdeo,uploand,descrio,slug,canal} = youbates.fields
     return(
-        <div>
-            <h1>Conteúdo</h1>
-            <iframe src={'https:'+vdeo.fields.file.url}
-            width="500"
-            height="250"
+        <div className={style.Videos}>
+            <iframe className={style.iframe} src={'https:'+vdeo.fields.file.url}
             frameBorder="0"
             allowFullScreen="false"
             />
-            {/* Comentário */}
-            <Comentario/>
-            <h1>{uploand}</h1>
+            {/* Descrição */}
+            <div className={style.Descri}>
+            <h1>{canal}</h1>
+            <h2>{slug}</h2>
+            <h3>{uploand}</h3>
+            <p>{descrio}</p>
+            </div>
         </div>
     )
 }

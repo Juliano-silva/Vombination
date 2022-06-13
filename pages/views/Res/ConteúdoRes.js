@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import style from './Restaurante.module.css'
 export async function getStaticProps() {
     const client = createClient({
@@ -15,7 +14,7 @@ export async function getStaticProps() {
     }
   }
 export default function Conteúdo({restbates}){
-    const {pratos,descrio,slug,ingredientsRes,fotosPrtatos} = restbates.fields
+    const {pratos,descrio,slug,ingredientsRes,fotosPrtatos,autor,tempo} = restbates.fields
     return(
         <div className={style.CorpoRest}>
             <div className={style.cardRestaurante}>
@@ -24,13 +23,13 @@ export default function Conteúdo({restbates}){
             height={fotosPrtatos.fields.file.details.image.height}
             />
             <h1>{pratos}</h1>
-            <h1>{descrio}</h1>
+            <p>{descrio}</p>
             <ul>
-                <li>{ingredientsRes}</li>
+              <h1>Ingredientes:</h1>
+                <li>{ingredientsRes+";"}</li>
+                <li>{"Tempo de preparo "+tempo+" minutos"}</li>
             </ul>
-            <div>
-                <Link href={'./recipes/' + slug}><a>Clique aqui</a></Link>
-            </div>
+            <h2>{"Criadora:"+autor}</h2>
             </div>
         </div>
     )

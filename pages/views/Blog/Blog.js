@@ -4,10 +4,7 @@ export default function Blog(){
     return(
         <div>
              <div className={style.Blog}>
-            <h1>Blog</h1>
-            <br />
             <Api/>
-            <br />
         </div>
         </div>
     )

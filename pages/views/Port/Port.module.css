@@ -1,24 +1,25 @@
 .Portfolio{
     border: 1px solid #134758;
-    height: 44.7em;
+    height: 100vh;
     background: #134758;
     text-align: center;
 }
 .Autore{
     background-image: url(../../Img/BK.jpg);
+    background-position: center;
     margin-top: -0.4px;
     height: 20em;
 }
 .Imagens{
-    border-radius: 250px;
+    border-radius: 50%;
 }
 .Port{
     border: 2px solid black;
-    width: 50em;
-    height: 22em;
+    width: 80em;
+    height: 26em;
     margin: auto;
     border-radius: 20px;
-    margin-top: 32px;
+    margin-top: 2%;
 }
 .Port > h1{
     color: white;
@@ -39,5 +40,5 @@
 .Informações > button{
     background: transparent;
     border: 1px solid transparent;
-    width: 4em;
+    width: 10em;
 }

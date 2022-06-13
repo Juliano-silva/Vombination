@@ -1,6 +1,49 @@
 .ListItem{
-    border: 1px solid red;
-    width: 10em;
+    display: block;
+    width: 24em;
     text-align: center;
+    color: black;
+    font-size: 25px;
+    margin-top: -17px;
+    text-align: left;
+}
+.Escrever{
+    display: block;
+    border: 1px solid black;
+    margin: auto;    
+    background: #1d9f9429;
     color: white;
+    width: 25em;
+    resize: none;
+    text-align: center;
+}
+.Close{
+    margin-left: 80vh;
+    position: absolute;
+    font-size: 30px;
+    margin-top: -17px;
+}
+.Listas{
+    overflow: auto;
+    background: #0638686D;
+    height: 100vh;
+}
+.buttonList{
+    display: block;
+    border: 0px solid transparent;
+    background: #3f109f8d;
+    color: white;
+    width: 10em;
+    height: 2em;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 10px;
+}
+.ListasLi{
+    border: 1px solid white;
+    background: gray;
+    width: 40em;
+    height: 2em;
+    margin: auto;
+    color: black;
 }

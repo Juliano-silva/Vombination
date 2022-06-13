@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap);
+
 .Blog{
-    border: 5px solid turquoise;
-    background: turquoise;
+    overflow-y: auto;
+    border: 0px solid;
+    background: #489dc3ab;
     text-align: center;
-    height: 30em;
+    height: 100%;
 }
 .texto{
     border: 1px solid red;
@@ -23,26 +26,71 @@
 .btn{
     border: 0px solid black;
     border-radius: 20px;
-    width: 10em;
+    width: 12em;
     height: 2em;
-    color: white;
+    color: black;
     cursor: pointer;
-    background: blue;
+    background: rgb(110, 110, 255);
+}
+.remove{
+    position: absolute;
+    margin-top: -28px;
+    font-size: 25px;
 }
 .Corpo{
-    border: 1px solid red;
+    border: 2px solid black;
     width: 60em;
     margin: auto;
+    border-radius: 10px;
+}
+.deta{
+    font-family: 'Vast Shadow', display;
+    text-align: right;
+    font-size: 18px;
+}
+.Titulo{
+    text-align: left;
+    margin-top: -35px;
 }
 .TextoT{
     border: 1px solid black;
+    color: white;
     height: 10em;
     word-wrap:break-word;
     overflow: auto;
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
+    border-radius: 6px;
+    text-align: left;
+}
+.Textareas{
+    border: 0px solid transparent;
+    resize: none;
+    width: 35em;
+    height: 2.5em;
+    border-radius: 6px;
+    background: #56Df8fe4;
+    margin-top: 10px;
+}
+.Textareas::-webkit-scrollbar{width: 0px;}
+.Textareas::placeholder{
+    text-align: center;
+    color: black;
 }
 .btn:hover{
     background: white;
     color: blue;
+    transition-delay: 1s;
+    transition-duration: 1s;
+    box-shadow: 1px 4px 1px skyblue;
+}
+.data{
+    visibility: hidden;
+}
+.Cores{
+    display: block;
+    background: white;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: -20px;
 }

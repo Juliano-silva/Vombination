@@ -1,7 +1,122 @@
-.Tabs{
-    display: block;
-    margin-left: 50px;
-    border: 1px solid blue;
-    width: 60%;
-    height: 23.4em;
+.Youbates{
+    background: #3d3e57dd;
+    height: 100vh;
+}
+.Vid{background: #3d3e57dd;}
+.Conteudo{
+   margin-top: -56.2em;
+   width: 40em;
+   overflow: auto;
+   margin-left: 62.5em;
+}
+.Tudo{
+    overflow: auto;
+    height: 50em;
+    width: 110em;
+    margin: auto;
+    background: #2f89a623;
+}
+.Tudo::-webkit-scrollbar{
+    width: 0px;
+}
+.Videos{
+    height: 10em;
+
+    overflow: hidden;
+}
+.iframe{
+    border: 1px solid black;
+    width: 250px;
+    height: 10em;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+.Descri{
+    width: 24em;
+    height: 8em;
+    overflow: auto;
+    word-break: break-all;
+    margin-top: -150px;
+    margin-left: 16.8em;
+}
+.Descri::-webkit-scrollbar{
+    width: 0px;
+}
+.ParteBaixo > h1{
+    color: white;
+}
+.Like{
+    width: 10em;
+    margin-left: 55em;
+    margin-top: -1.9em;
+}
+.Like > button{
+    font-size: 35px;
+    border: 1px solid transparent;
+    background: transparent;
+}
+.Like > button:focus{
+    color: turquoise;
+}
+.Doutor{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-image: url(../../Img/Autor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.ParteBaixo > h2{
+    width: 10em;
+    margin-left: 2.5em;
+    margin-top: -42px;
+    color: white;
+}
+.hr{
+
+    margin-top: 18px;
+    width: 60em;
+}
+.Comentario::-webkit-scrollbar{
+    width: 0px;
+}
+.Comentario{
+    border: 1px solid transparent;
+    border-bottom: 1px solid gray;
+    margin-top: 10px;
+    width: 50em;
+    color: black;
+    text-align: center;
+    height: 1em;
+    background: transparent;
+    resize: none;
+}
+.BtnCom:hover{
+    background: white;
+    color: black;
+}
+.BtnCom{
+    border: 1px solid transparent;
+    margin-left: 21em;
+    width: 6em;
+    border-radius: 20px;
+    color: white;
+    background: black;
+}
+.TabImg{
+    background-image: url(../../Img/Saitama.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1000px;
+    height: 500px;
+    border: 0px solid transparent;
+}
+.comeTexto{
+    padding: 0.2em;
+    width: 40em;
+    color: white;
+    text-align: center;
+    word-wrap: break-word;
 }

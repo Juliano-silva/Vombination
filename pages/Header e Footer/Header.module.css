@@ -6,6 +6,7 @@
     text-align: center;
     top: 0;
     height: 2.5em;
+    overflow: hidden;
 }
 .Titulo > h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -16,7 +17,9 @@
     display: none;
     position: fixed;
     border: 1px solid black;
-    background: black;
+    background-image: url(../Img/Background\ Celular.jfif);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     color: white;
     width: 10em;
     height: 100%;
@@ -27,8 +30,13 @@
     margin-left: -155px;
 }
 .sub_títulos > li{
-    color: white;
+    text-align: center;
     padding: 0.4em;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.sub_títulos > li > a{
+    color: orange;
 }
 .submi{display: none;}
 .Menu,.Menu1{
@@ -42,6 +50,27 @@
 .HPerfil{
     position: absolute;
     bottom: 0;
-    border: 1px solid white;
-    width: 10em;
+    width: 9.9em;
+}
+.HPerfil > h1 , .HPerfil > p{
+    text-align: center;
+    margin-left: 10px;
+    color: black;
+}
+.Botão{
+    cursor: pointer;
+    border: 0px solid transparent;
+    font-size: 30px;
+    color: orange;
+    background: transparent;
+    width: 5em;
+}
+.SidebarImg{
+    border: 1px solid transparent;
+    height: 2.5em;
+    border-radius: 50%;
+    position: absolute;
+    width: 2.5em;
+    background-image: url(../Img/Autor.png);
+    background-size: 100%;
 }

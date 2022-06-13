@@ -1,0 +1,74 @@
+.Blog{
+    border: 1px solid black;
+    background: black;
+    margin: auto;
+    color: white;
+    height: 100vh;
+    margin-top: -1px;
+}
+.img{
+    filter: drop-shadow(0 0 0.4rem red);
+}
+.CardD{
+    border: 1px solid white;
+    position: absolute;
+    right: 0;
+    width: 16em;
+    height: 60em;
+}
+.contéudoD{
+    border: 1px solid bisque;
+    width: 80em;
+}
+.ImgDmc{
+    border: 1px solid white;
+    width: 15em;
+    height: 15em;
+}
+.Headeres{
+    border: 1px solid red;
+}
+.DmcImg{
+    width: 15em;
+    height: 15em;
+    margin: auto;
+}
+.CorpoDmc{
+    border: 2px solid red;
+    box-shadow: 1px 1px 15px brown;
+    width: 90.8em;
+    height: 40em;
+    margin: auto;
+    margin-top: 250px;
+    border-radius: 20px;
+}
+.CorpoDmc::-webkit-scrollbar{
+    width: 0px;
+}
+.Devil{
+    background: transparent;
+    width: 100em;
+    margin: auto;
+    margin-top: 1px;
+    overflow: auto;
+    height: 55em;
+}
+.Devil::-webkit-scrollbar{
+    width: 0px;
+}
+.ICone{width: 100%;height: 40em;margin-top: -10px;}
+.DmcConteúdo{
+    text-align: center;
+    font-size: 40px;
+    word-wrap: break-word;
+}
+.DmcConteúdo > p::-webkit-scrollbar{
+    width: 0px;
+}
+.DmcConteúdo > p{
+    overflow: auto;
+    height: 190.5px;
+    border-radius: 0 0 20px 20px ;
+    background: wheat;
+    color: black;
+}

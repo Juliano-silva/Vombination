@@ -1,25 +1,28 @@
 {
   "projects": [
     {
-      "deta": "Dia:5 Hora: 0:15:31",
-      "texto": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-      "id": 3
+      "deta": "Dia:11 Hora: 0:26:46",
+      "texto": "Olá e eu gosto de dinheiro",
+      "titulo": "Vombate",
+      "color": "#19941b",
+      "id": 8
     },
     {
-      "deta": "Dia:10 Hora: 19:40:32",
-      "texto": "hfddhfdhffdhdfh",
-      "id": 4
+      "deta": "Dia:11 Hora: 0:27:33",
+      "titulo": "Delta",
+      "texto": "Undertale",
+      "color": "#a7a211",
+      "id": 9
+    },
+    {
+      "deta": "Dia:11 Hora: 11:50:9",
+      "color": "#c05d5d",
+      "texto": "Delicia",
+      "titulo": "Juliano",
+      "id": 10
     }
   ],
   "historico": [
-    {
-      "texto": "sfaasfsfa",
-      "id": 1
-    },
-    {
-      "texto": "fasfasasf",
-      "id": 2
-    },
     {
       "texto": "fdhhfdhf",
       "id": 3
@@ -31,6 +34,34 @@
     {
       "texto": "dhsdhsdhs",
       "id": 5
+    },
+    {
+      "texto": "hu",
+      "id": 6
+    },
+    {
+      "texto": "Juliano",
+      "id": 7
+    },
+    {
+      "texto": "asfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfs",
+      "id": 9
+    },
+    {
+      "texto": "safsafsafsafsafsafsafsafsafsafsafsafsafsafsafsafsafsafsafsaf",
+      "id": 10
+    },
+    {
+      "texto": "Salgadinho",
+      "id": 11
+    },
+    {
+      "texto": "Pizza ",
+      "id": 12
+    },
+    {
+      "texto": "Vombate",
+      "id": 13
     }
   ],
   "Listas": [],
@@ -39,6 +70,22 @@
       "deta": "Dia:10 Hora: 20:5:33",
       "texto": "gdsagdsgdsa",
       "id": 1
+    },
+    {
+      "texto": "hgghj\njçhkç\n",
+      "id": 2
+    },
+    {
+      "texto": "Criador do computador",
+      "id": 3
+    },
+    {
+      "texto": "Eu levei um tempão\nPra escrever esse textão\nE ele tá igual meu coração\nVai precisar de correção\n\nEu esqueci que excesso é com dois S\nMas não esqueço da gente\nNão sei se a gente é junto ou separado\nMas sei que você entende\nQue entre verbos e acentos\nEu tô sofrendo\n\nE você só respondeu\nUm oi com um I e um áudio mudo\nE já foi suficiente pra desmoronar meu mundo\n\nDuas letras só\nNem gastou seu português\nMe bloqueou de vez\n\nEu esqueci que excesso é com dois S\nMas não esqueço da gente\nNão sei se a gente é junto ou separado\nMas sei que você entende\nQue entre verbos e acentos\nEu tô sofrendo\n\nE você só respondeu\nUm oi com um I e um áudio mudo\nE já foi suficiente pra desmoronar meu mundo\nDuas letras só\nNem gastou seu português\nPra acabar\n\nE você só respondeu\nCom oi e um i e um áudio mudo\nE já foi suficiente pra desmoronar meu mundo\nCom duas letras só\nNem gastou seu português\nMe bloqueou de vez",
+      "id": 4
+    },
+    {
+      "texto": "Juliano",
+      "id": 5
     }
   ]
 }

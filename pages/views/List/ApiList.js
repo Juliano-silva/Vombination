@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { BsThreeDots } from "react-icons/bs"
 import style from './Listas.module.css'
 import { render } from 'react-dom'
+import {FaWindowClose} from 'react-icons/fa'
 function Projects () {
   const [projects, setProjects] = useState([])
   useEffect(() => {
@@ -81,14 +82,14 @@ function subButton(){
 function SubmitButton({ text }) {
   return (
     <div>
-      <button onClick={subButton}>{text}</button>
+      <button className={style.buttonList} onClick={subButton}>{text}</button>
     </div>
   )
 }
 function Textarea({name, placeholder, handleOnChange, value}){
   return(
     <div>
-    <textarea name={name} id={name} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
+    <textarea maxLength={60} className={style.Escrever} name={name} id={name} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
     </div>
   )
 }
@@ -105,9 +106,11 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   return (
     <form onSubmit={submit} >
       <ul>
-        <li><Textarea text="Texto" name="texto" placeholder="O que está acontecendo?" handleOnChange={handleChange} value={project.texto}/></li>
+        <br />
+        <li><Textarea text="Texto" name="texto" placeholder="Adicionar item:" handleOnChange={handleChange} value={project.texto}/></li>
       </ul>
       <SubmitButton handleOnChange={handleChange} id="SB" text={btnText} />
+      <br />
     </form>
   )
 }
@@ -118,13 +121,15 @@ function ProjectCard({ id, handleRemove,texto }) {
     }
     // Estilo do corpo
     return (
-        <div>
+      <div>
+        <div className={style.ListasLi}>
         <br />
-        <BsThreeDots onClick={remove}/>
+        <FaWindowClose className={style.Close} onClick={remove}/>
         <div>
         <p className={style.ListItem}>{texto}</p>  
         </div>
         </div>
+      </div>
     )
 }
 export default function Api(){

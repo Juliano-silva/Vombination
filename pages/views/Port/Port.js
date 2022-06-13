@@ -14,7 +14,8 @@ export default function Port(){
         <Header/>
         <div className={style.Portfolio}>
             <div className={style.Autore}>
-            <Image width={400} height={322}  className={style.Imagens} src={Autor}/>
+                <br />
+            <Image width={360} height={300}  className={style.Imagens} src={Autor}/>
             </div>
             <div className={style.Port}>
             <h1>Juliano silva de almeida </h1>

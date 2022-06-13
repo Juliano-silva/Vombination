@@ -1,6 +1,6 @@
 import { useParams,useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { BsThreeDots } from "react-icons/bs"
+import { AiOutlineClose } from "react-icons/ai"
 import style from './Blog.module.css'
 import styled from 'styled-components'
 function Project() {
@@ -88,6 +88,7 @@ function Projects () {
               name={project.name}
               texto={project.texto}
               img={project.img}
+              titulo={project.titulo}
               color={project.color}
               deta={project.deta}
               key={project.id}
@@ -106,6 +107,7 @@ function NewProject() {
   return (
     <div >
       <ProjectForm handleSubmit={createPost} btnText="Enviar" />
+      <br />
     </div>
   )
 }
@@ -122,21 +124,29 @@ function SubmitButton({ text }) {
 function Textarea({name, placeholder, handleOnChange, value}){
   return(
     <div>
-    <textarea name={name} id={name} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
+    <textarea name={name} id={name} className={style.Textareas} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
+    </div>
+  )
+}
+function Título({name, placeholder, handleOnChange, value}){
+  return(
+    <div>
+    <textarea name={name} id={name} className={style.Textareas} placeholder={placeholder} onChange={handleOnChange} value={value}></textarea>
     </div>
   )
 }
 function Data(name,handleOnChange, value){
   return(
     <div>
-      <input type="datetime" name={name} id={name} onChange={handleOnChange} value={value} />
+      <input className={style.data} type="datetime" name={name} id={name} onChange={handleOnChange} value={value} />
     </div>
   )
 }
 function Color({name,handleOnChange,value,type}){
   return(
     <div>
-      <input type={type} name={name} id={name} onChange={handleOnChange} value={value} />
+      <input className={style.Cores} type={type} name={name} id={name} onChange={handleOnChange} value={value} />
+      <br />
     </div>
   )
 }
@@ -159,8 +169,10 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   return (
     <form onSubmit={submit} >
       <ul>
-        <li><Textarea text="Texto" name="texto" placeholder="O que está acontecendo?" handleOnChange={handleChange} value={project.texto}/></li>
-        <li><Data name="deta" handleChange={handleChange} value={project.deta=Horário}/></li>
+        <li><Textarea text="Texto" name="texto" placeholder="O que está Pensado?" handleOnChange={handleChange} value={project.texto}/></li>
+        <li><Título name="titulo" id="titulo" placeholder="Digite o Nome do projeto:"handleOnChange={handleChange} value={project.titulo} /></li>
+        <li><h4>Escolha a cor de sua caixa</h4></li>
+        <li><Data  name="deta" handleChange={handleChange} value={project.deta=Horário}/></li>
         <li><Color type="color" name="color" handleOnChange={handleChange} value={project.color}/></li>
       </ul>
       <SubmitButton handleOnChange={handleChange} id="SB" text={btnText} />
@@ -168,7 +180,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   )
 }
 export const CorpoBK = styled.div`background:${(props) => props.color}`;
-function ProjectCard({ id, handleRemove,texto,deta,color }) {
+function ProjectCard({ id, handleRemove,texto,deta,color,titulo }) {
     const remove = (e) => {
       e.preventDefault()
       handleRemove(id)
@@ -179,9 +191,9 @@ function ProjectCard({ id, handleRemove,texto,deta,color }) {
       <div>
         <CorpoBK className={style.Corpo} color={vermelho}>
         <br />
-       <h1>{deta}</h1>
-        <h1>{color}</h1>
-        <BsThreeDots onClick={remove}/>
+       <h1 className={style.deta}>{deta}</h1>
+       <h1 className={style.Titulo}>{titulo}</h1>
+        <AiOutlineClose className={style.remove} onClick={remove}/>
         <div className={style.TextoT}>
         <p>{texto} </p>  
         </div>
